@@ -1,9 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Table, Button } from 'react-bootstrap';
 import { userContext } from '../App'
-import { withRouter } from 'react-router-dom';
 import { Types } from '../reducers';
-const Cart = (props) => {
+const Cart = () => {
     const { state, dispatch } = useContext(userContext);
     const [subtotal, setSubtotal] = useState(0)
     //console.log(state)
@@ -104,4 +103,4 @@ const Cart = (props) => {
     )
 }
 
-export default withRouter(Cart)
+export default Cart
